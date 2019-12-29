@@ -20,9 +20,6 @@ class Instructor::CoursesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-   def show
-    @course = Course.find(params[:id])
-  end
 
   private
 
