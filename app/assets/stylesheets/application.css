@@ -24,6 +24,7 @@
 }
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
+}
 .frosty {
   background: rgba(0, 0, 0, 0.5);
   color: white;
@@ -46,20 +47,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   padding-left: 5%;
   padding-right: 5%;
 }
-<br />
-<div class="row feature text-center">
-  <div class="col-12 col-sm">
-    <h3>Feature 1</h3>
-  </div>
 
-  <div class="col-12 col-sm">
-    <h3>Feature 2</h3>
-  </div>
-
-  <div class="col-12 col-sm">
-    <h3>Feature 3</h3>
-  </div>
-</div>
 body {
   background: image_url('bg.png');
  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
