@@ -1,4 +1,7 @@
 class Instructor::CoursesController < ApplicationController
+   def index
+     @courses = Course.all
+  end
    before_action :authenticate_user!
   def new
     @course = Course.new
