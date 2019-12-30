@@ -8,7 +8,6 @@ class Instructor::CoursesController < ApplicationController
    def show
     @course = Course.find(params[:id])
   end
-   before_action :authenticate_user!
   def new
     @course = Course.new
   end
