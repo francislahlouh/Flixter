@@ -234,6 +234,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   jquery-rails
+  mini_magick
   pg (>= 0.18, < 2.0)
   popper_js (~> 1.11.1)
   puma (~> 3.11)
