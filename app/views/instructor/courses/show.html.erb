@@ -59,9 +59,19 @@
     <% @course.sections.each do |section| %>
       <div class="section">
         <h3>
-          <%= section.title %>
+          <ul class="sections">
+<% current_course.sections.rank(:row_order).each do |section| %>
+ <li data-update-url="<%= instructor_section_path section %>" class="section-li">
+  <li data-update-url="<%= instructor_section_path section %>">
+      <div class="header">
+        <br />
+      <span class="fa fa-ellipsis-v"></span>
+       <div class="col-11 text-center">
+    </div>
+    <div class="row">
+        <div class="col-1">
         </h3>
-        <ul class="lessons">
+        <ul class="lessons"/>
         <div class="row">
           <% section.lessons.each do |lesson| %>
             <div class="col-12 col-sm-6">
@@ -70,14 +80,22 @@
                   <b><%= lesson.title %></b>
                   <br />
                   <%= lesson.subtitle %>
+                  <br class="clr" />
+                  <br class="clr" />
               <ul>
   <% section.lessons.rank(:row_order).each do |lesson| %>
   <li data-item-id=<%= lesson.id %>>
        <li data-update-url="<%= instructor_lesson_path(lesson) %>">
-    <li>
-      <b><%= lesson.title %></b>
-      -
-      <%= lesson.subtitle %>
+          </div>
+        <div class="col-11">
+          <p>
+            <b><%= lesson.title %></b>
+          </p>
+          <p>
+            <%= lesson.subtitle %>
+          </p>
+        </div>
+      </div>
     </li>
   <% end %>
 </ul>
