@@ -10,6 +10,14 @@ class Instructor::SectionsController < ApplicationController
     @section = current_course.sections.create(section_params)
     redirect_to instructor_course_path(current_course)
   end
+  helper_method :current_course
+def current_course
+  if params[:course_id]
+    @current_course ||= Course.find(params[:course_id])
+  else
+    current_section.course
+  end
+end
 
   private
   def require_authorized_for_current_course
